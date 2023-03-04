@@ -1,0 +1,6 @@
+{
+  "appid": "<your_openweather_api_key>",
+  "city": "Lahore",
+  "units": "standard",
+  "lang": "ar"
+}
