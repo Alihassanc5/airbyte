@@ -1,7 +1,7 @@
 from abc import ABC
 from typing import Any, Iterable, List, Mapping, MutableMapping, Optional, Tuple
-
 import requests
+
 from airbyte_cdk.sources.streams.http import HttpStream
 
 
@@ -47,8 +47,8 @@ class CurrentWeather(OpenWeatherStream):
             "appid": self.appid,
             "lat": self.lat,
             "lon": self.lon,
+            "units": self.units,
             "lang": self.lang,
-            "units": self.units
         }
 
     def parse_response(self, response: requests.Response, **kwargs) -> Iterable[Mapping]:

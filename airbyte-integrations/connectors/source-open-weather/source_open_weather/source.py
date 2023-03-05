@@ -1,7 +1,7 @@
 from typing import Any, Iterable, List, Mapping, MutableMapping, Optional, Tuple
-
-import requests
 from http import HTTPStatus
+import requests
+
 from airbyte_cdk.sources import AbstractSource
 from airbyte_cdk.sources.streams import Stream
 
@@ -34,7 +34,7 @@ class SourceOpenWeather(AbstractSource):
                 appid=config["appid"],
                 lat=lat,
                 lon=lon,
-                lang=config.get("lang"),
                 units=config.get("units"),
+                lang=config.get("lang"),
             )
         ]
